@@ -1,0 +1,6 @@
+[python]
+# symbol = " "
+pyenv_version_name = true
+
+[git_metrics]
+disabled = false
