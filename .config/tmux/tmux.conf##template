@@ -28,6 +28,9 @@ set-option -g default-shell /usr/bin/fish
 # Avoid ESC delay
 set -s escape-time 0
 
+# Recommended by `nvim` `:checkhealth`
+set-option -g focus-events on
+
 # Sources
 # https://github.com/jonhoo/configs/blob/master/shell/.tmux.conf
 
