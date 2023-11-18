@@ -10,11 +10,14 @@ end
 starship init fish | source
 
 # pyenv
-fish_add_path /home/chris/.pyenv/bin
+fish_add_path ~/.pyenv/bin
 
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 status is-interactive; and pyenv virtualenv-init - | source
 
 # pipx
-fish_add_path /home/chris/.local/bin
+fish_add_path ~/.local/bin
+
+# cargo
+fish_add_path ~/.cargo/bin
