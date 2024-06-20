@@ -21,3 +21,6 @@ fish_add_path ~/.local/bin
 
 # cargo
 fish_add_path ~/.cargo/bin
+
+# mise
+~/.local/bin/mise activate fish | source
