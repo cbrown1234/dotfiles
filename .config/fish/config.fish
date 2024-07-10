@@ -9,6 +9,12 @@ end
 
 starship init fish | source
 
+# ruby
+# before pyenv to avoid path issue with /bin
+if command -q rvm 
+    rvm default
+end
+
 # pyenv
 fish_add_path ~/.pyenv/bin
 
@@ -23,4 +29,8 @@ fish_add_path ~/.local/bin
 fish_add_path ~/.cargo/bin
 
 # mise
-~/.local/bin/mise activate fish | source
+fish_add_path ~/.local/bin
+if command -q mise
+    mise activate fish | source
+end
+
