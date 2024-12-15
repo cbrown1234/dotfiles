@@ -38,3 +38,9 @@ end
 if test -f /home/linuxbrew/.linuxbrew/bin/brew
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 end
+
+# direnv
+if command -q direnv
+    direnv hook fish | source
+end
+
