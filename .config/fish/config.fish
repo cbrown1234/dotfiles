@@ -34,3 +34,7 @@ if command -q mise
     mise activate fish | source
 end
 
+# brew
+if test -f /home/linuxbrew/.linuxbrew/bin/brew
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
