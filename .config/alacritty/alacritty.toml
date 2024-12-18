@@ -1,2 +1,6 @@
 [shell]
 program = "/usr/bin/fish"
+font:
+
+  # Point size
+  size: 14.0
