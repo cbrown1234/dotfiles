@@ -35,6 +35,7 @@ if command -q mise
 end
 
 # brew
+# fish_add_path /home/linuxbrew/.linuxbrew/bin
 if test -f /home/linuxbrew/.linuxbrew/bin/brew
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
