@@ -1,5 +1,6 @@
 [python]
 pyenv_version_name = true
+pyenv_prefix = ''
 
 [git_metrics]
 disabled = false
