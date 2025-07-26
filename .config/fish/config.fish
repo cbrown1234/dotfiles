@@ -1,4 +1,5 @@
 if status is-interactive
+and isatty stdout # devcontainers env var fix
 and not set -q TMUX
     if tmux has-session -t home
         exec tmux attach-session -t home
@@ -51,4 +52,11 @@ end
 # direnv
 if command -q direnv
     direnv hook fish | source
+end
+
+if status is-login
+    and status is-interactive
+    # To add a key, set -Ua SSH_KEYS_TO_AUTOLOAD keypath
+    # To remove a key, set -U --erase SSH_KEYS_TO_AUTOLOAD[index_of_key]
+    keychain --eval $SSH_KEYS_TO_AUTOLOAD | source
 end
