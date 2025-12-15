@@ -30,6 +30,12 @@ if command -q rvm
     rvm default
 end
 
+if command -q gem
+    if test -d (gem environment gemdir)"/bin"
+        fish_add_path (gem environment gemdir)"/bin"
+    end
+end
+
 # pyenv
 fish_add_path ~/.pyenv/bin
 
@@ -56,7 +62,9 @@ end
 
 if status is-login
     and status is-interactive
+    # set -U GPG_TTY $(tty)
+
     # To add a key, set -Ua SSH_KEYS_TO_AUTOLOAD keypath
     # To remove a key, set -U --erase SSH_KEYS_TO_AUTOLOAD[index_of_key]
-    keychain --eval $SSH_KEYS_TO_AUTOLOAD | source
+    keychain --eval $SSH_KEYS_TO_AUTOLOAD --agents ssh,gpg | source
 end
