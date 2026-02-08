@@ -68,3 +68,8 @@ if status is-login
     # To remove a key, set -U --erase SSH_KEYS_TO_AUTOLOAD[index_of_key]
     keychain --eval $SSH_KEYS_TO_AUTOLOAD --agents ssh,gpg | source
 end
+
+# docker
+if command -q docker
+    docker completion fish | source
+end
